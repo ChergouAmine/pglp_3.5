@@ -16,6 +16,12 @@ public class ServiceTest {
     private final PrintStream originalErr = System.err;
     
     
- 
+    @Before
+    public void setUpStreams() {
+        System.setOut(new PrintStream(outContent));
+        System.setErr(new PrintStream(errContent));
+    }
+
+
 
 }

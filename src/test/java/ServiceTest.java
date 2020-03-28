@@ -28,7 +28,16 @@ public class ServiceTest {
         System.setErr(originalErr);
     }
     
-    
+    @Test
+    public void test(){
+        Metiers m=new Metier();
+        
+        Service s=new Service(m);
+        s.demarrerMetier();
+        assert(outContent.toString().contains(": Début du métier."));
+        assert(outContent.toString().contains(": Fin du métier."));
+        
+    }
     
 
 }

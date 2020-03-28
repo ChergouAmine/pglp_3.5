@@ -22,6 +22,13 @@ public class ServiceTest {
         System.setErr(new PrintStream(errContent));
     }
 
-
+    @After
+    public void restoreStreams() {
+        System.setOut(originalOut);
+        System.setErr(originalErr);
+    }
+    
+    
+    
 
 }
